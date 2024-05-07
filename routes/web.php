@@ -6,6 +6,7 @@ use App\Http\Controllers\DataController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MediaController;
 use App\Http\Controllers\NieuwsController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WedstrijdenController;
 
 /*
@@ -41,3 +42,9 @@ Route::get('/wedstrijden/tegenstanders', [WedstrijdenController::class, 'tegenst
 Route::get('/media', [MediaController::class, 'index'])->name('media');
 Route::get('/add-data', [DataController::class, 'showForm'])->name('add-data.form');
 Route::post('/add-data', [DataController::class, 'addData'])->name('add-data');
+
+// Route om het formulier weer te geven voor het maken van een nieuw artikel
+Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');
+
+// Route om een nieuw artikel op te slaan
+Route::post('/articles', [ArticleController::class, 'store'])->name('articles.store');

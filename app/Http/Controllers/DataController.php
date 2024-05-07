@@ -21,7 +21,7 @@ class DataController extends Controller
     {
        // Valideer de invoer (optioneel)
     $request->validate([
-        'username' => 'required|string',
+        'name' => 'required|string',
         // Voeg hier validatieregels toe voor andere velden
     ]);
 
