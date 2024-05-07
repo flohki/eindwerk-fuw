@@ -1,7 +1,7 @@
 <footer>
     <div class="footer-left">
         <!-- Logo -->
-        <img src="{{ asset('images/logo.png') }}" alt="Logo">
+        <img src="{{ asset('images/logo-kvvhz.png') }}" alt="KVV Heusden-Zolder">
     </div>
     <div class="footer-center">
         <a href="#"><i class="fab fa-facebook"></i></a>

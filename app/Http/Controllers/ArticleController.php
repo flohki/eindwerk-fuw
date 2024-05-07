@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 
 class ArticleController extends Controller
 {
@@ -14,6 +15,17 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
+        $validator = Validator::make($request->all(), Article::$rules);
+
+        if ($validator->fails()) {
+            return redirect()->back()->withErrors($validator)->withInput();
+        }
+
+        // Creëer artikel
+        Article::create($request->all());
+
+        // Redirect of andere actie
+
         $validatedData = $request->validate([
             'title' => 'required|string|max:255',
             'image' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048', // Adjust max file size as needed
