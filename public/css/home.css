@@ -1,0 +1,54 @@
+body{
+    margin: 0;
+    width: 100%;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+/* Slider sectie */
+.slider {
+
+}
+
+/* Nieuws-update sectie */
+.news-update {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+/* Over onze Club sectie */
+.about-club {
+    padding: 40px 0;
+}
+
+/* Teams sectie */
+.teams {
+    padding: 40px 0;
+}
+
+/* Wedstrijden sectie */
+.matches {
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+/* Nieuwsberichten sectie */
+.news {
+    padding: 40px 0;
+}
+
+/* Contact sectie */
+.contact {
+    padding: 40px 0;
+}
