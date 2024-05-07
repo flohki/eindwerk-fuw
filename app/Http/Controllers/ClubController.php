@@ -13,21 +13,21 @@ class ClubController extends Controller
 
     public function info()
     {
-        return view('club.info');
+        return view('pages.club.info');
     }
 
     public function terreinen()
     {
-        return view('club.terreinen');
+        return view('pages.club.terreinen');
     }
 
     public function feestzaal()
     {
-        return view('club.feestzaal');
+        return view('pages.club.feestzaal');
     }
 
     public function contact()
     {
-        return view('club.contact');
+        return view('pages.club.contact');
     }
 }

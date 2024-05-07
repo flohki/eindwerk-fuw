@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="{{ asset('css/home.css') }}">
 @extends('layouts.default')
 
 @section('title', 'Home')
@@ -18,8 +19,19 @@
 
     <section class="about-club">
         <div class="container">
-            <h2>Over de Club</h2>
-            <p>Beschrijving van de club hier.</p>
+            <div>
+                <h2>Over onze Club</h2>
+            </div>
+            <div>
+                <p>KVV Heusden-Zolder, is een voetbalclub die diep geworteld is in de gemeenschap van
+                    Heusden-Zolder, Limburg, België. De club, met zijn sterke jeugdopleiding en diverse seniorprogramma,
+                    staat
+                    bekend om zijn sportiviteit en gemeenschapsbetrokkenheid. Door voetbal te combineren met sociale
+                    evenementen
+                    en liefdadigheidsinitiatieven, vervult KVV Heusden-Zolder een centrale rol in het lokale
+                    gemeenschapsleven,
+                    waar passie voor de sport samensmelt met verbondenheid en trots.</p>
+            </div>
         </div>
     </section>
 

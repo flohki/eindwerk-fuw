@@ -33,7 +33,10 @@ Route::get('/nieuws', [NieuwsController::class, 'index'])->name('nieuws');
 
 // Route voor de wedstrijdenpagina
 Route::get('/wedstrijden', [WedstrijdenController::class, 'index'])->name('wedstrijden');
-
+Route::get('/wedstrijden/kalender', [WedstrijdenController::class, 'kalender'])->name('wedstrijden.kalender');
+Route::get('/wedstrijden/klassement', [WedstrijdenController::class, 'klassement'])->name('wedstrijden.klassement');
+Route::get('/wedstrijden/reserven', [WedstrijdenController::class, 'reserven'])->name('wedstrijden.reserven');
+Route::get('/wedstrijden/tegenstanders', [WedstrijdenController::class, 'tegenstanders'])->name('wedstrijden.tegenstanders');
 // Route voor de mediapagina
 Route::get('/media', [MediaController::class, 'index'])->name('media');
 Route::get('/add-data', [DataController::class, 'showForm'])->name('add-data.form');
