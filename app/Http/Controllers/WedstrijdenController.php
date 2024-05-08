@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Kalender;
 use Illuminate\Http\Request;
 
 class WedstrijdenController extends Controller
@@ -13,7 +14,10 @@ class WedstrijdenController extends Controller
 
     public function kalender()
     {
-        return view('pages.wedstrijden.kalender');
+        $kalender = Kalender::all();
+
+        // Geef de kalendergegevens door aan de weergave
+        return view('pages.wedstrijden.kalender', ['kalender' => $kalender]);
     }
 
     public function klassement()
