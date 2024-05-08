@@ -17,7 +17,7 @@ class WedstrijdenController extends Controller
         if ($request->isMethod('post')){
             $validatedData = $request->validate([
                 'date' => 'required|date',
-                'startuur' => 'required|date_format:H:i',
+                'startuur' => 'required|time',
                 'thuisploeg' => 'required|string',
                 'uitploeg' => 'required|string',
                 'uitslag' => 'required|string',

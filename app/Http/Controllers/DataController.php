@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
+use Carbon\Carbon;
 use App\Models\User;
-use App\Models\Klassement;
-use App\Models\Doelpunten;
 use App\Models\Kaarten;
-use App\Models\Wedstrijdstand;
 use App\Models\Kalender;
+use App\Models\Doelpunten;
+use App\Models\Klassement;
 
 use Illuminate\Http\Request;
+use App\Models\Wedstrijdstand;
 
 class DataController extends Controller
 {
@@ -60,17 +61,16 @@ class DataController extends Controller
         'verslag' => $request->input('verslag'),
     ]);
 
+    $formattedDate = Carbon::createFromFormat('d-m-Y', $request->input('date'))->format('Y-m-d');
+
     // Voeg een nieuwe kalender toe
     Kalender::create([
-        'date' => $request->input('date'),
+        'date' => $formattedDate,
         'startuur' => $request->input('startuur'),
         'thuisploeg' => $request->input('thuisploeg'),
         'uitploeg' => $request->input('uitploeg'),
         'uitslag' => $request->input('uitslag'),
         'verslag_path' => $request->input('verslag_path'),
     ]);
-
-    // Redirect naar een succesvolle pagina of een andere route
-    return redirect()->route('add-data.form')->with('success', 'Gegevens succesvol toegevoegd!');
     }
 }

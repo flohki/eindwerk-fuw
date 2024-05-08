@@ -9,12 +9,12 @@
 
         <!-- Invoervelden -->
         <div class="form-group">
-            <label for="datum">Datum:</label>
+            <label for="date">Datum:</label>
             <input type="date" name="date" id="date" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="startuur">Startuur:</label>
-            <input type="time" name="uur_start" id="startuur" class="form-control" required>
+            <input type="time" name="startuur" id="startuur" class="form-control" required>
         </div>
         <div class="form-group">
             <label for="thuisploeg">Thuisploeg:</label>

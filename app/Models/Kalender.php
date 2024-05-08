@@ -12,11 +12,14 @@ class Kalender extends Model
     protected $table = 'kalender';
 
     protected $fillable = [
-        'datum',
-        'uur_start',
+        'date',
+        'startuur',
         'thuisploeg',
         'uitploeg',
         'uitslag',
-        'verslag'
+        'verslag_path'
+    ];
+    protected $casts = [
+        'uitslag' => 'string', // Hiermee geef je aan dat 'uitslag' als een string moet worden gecast
     ];
 }
