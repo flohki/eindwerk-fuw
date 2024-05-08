@@ -42,6 +42,7 @@ Route::get('/wedstrijden/tegenstanders', [WedstrijdenController::class, 'tegenst
 Route::get('/media', [MediaController::class, 'index'])->name('media');
 Route::get('/add-data', [DataController::class, 'showForm'])->name('add-data.form');
 Route::post('/add-data', [DataController::class, 'addData'])->name('add-data');
+Route::post('/wedstrijden/kalender/store', [DataController::class, 'addData'])->name('wedstrijden.kalender.store');
 
 // Route om het formulier weer te geven voor het maken van een nieuw artikel
 Route::get('/articles/create', [ArticleController::class, 'create'])->name('articles.create');

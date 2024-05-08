@@ -62,12 +62,12 @@ class DataController extends Controller
 
     // Voeg een nieuwe kalender toe
     Kalender::create([
-        'datum' => $request->input('datum'),
-        'uur_start' => $request->input('uur_start'),
+        'date' => $request->input('date'),
+        'startuur' => $request->input('startuur'),
         'thuisploeg' => $request->input('thuisploeg'),
         'uitploeg' => $request->input('uitploeg'),
-        'stand_na_einde' => $request->input('stand_na_einde'),
-        'verslag' => $request->input('verslag'),
+        'uitslag' => $request->input('uitslag'),
+        'verslag_path' => $request->input('verslag_path'),
     ]);
 
     // Redirect naar een succesvolle pagina of een andere route
