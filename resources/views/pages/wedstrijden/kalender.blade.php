@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="{{ asset('css/wedstrijden/kalender.css') }}">
+
 @extends('layouts.default')
 
 @section('title', 'Kalender')
@@ -36,8 +38,8 @@
         <!-- Knop om het formulier in te dienen -->
         <button type="submit" class="btn btn-primary">Toevoegen</button>
     </form>
-    <div style="overflow-x:auto;">
-        <table width="100%" class="table tabelstats2 table-striped">
+    <div>
+        <table width="100%">
             <thead>
                 <tr>
                     <th>Datum</th>
